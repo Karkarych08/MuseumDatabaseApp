@@ -1,22 +1,28 @@
 package university.app.Services;
 
 import lombok.Getter;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Service;
+import university.app.config.Settings;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-@Component
+@Service
 public class JDBConnect {
-    Connection connection;
-    @Getter
-    Statement statement;
 
-    public JDBConnect(String url, String username,String password) throws SQLException {
-        this.connection = DriverManager.getConnection(url,username,password);
-        this.statement = connection.createStatement();
+    AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(Settings.class);
+
+    Settings setting = ctx.getBean(Settings.class);
+
+    private final Connection connection = DriverManager.getConnection(setting.getURL(),setting.getUsername(),setting.getPassword());
+    @Getter
+    Statement statement = connection.createStatement();
+
+    public JDBConnect() throws SQLException {
     }
+
 
 }

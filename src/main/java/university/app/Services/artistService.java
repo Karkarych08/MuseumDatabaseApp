@@ -23,6 +23,11 @@ public class artistService implements artist {
         return aRep.findAll();
     }
 
+    public Collection<artistDAO> findAllartistbycountry(String country) throws SQLException {
+
+        return aRep.findAllByCountry(country);
+    }
+
     @Override
     public Collection<artistDAO> findartist(Integer id) {
         return null;

@@ -17,9 +17,8 @@ public class JDBConnect {
 
     Settings setting = ctx.getBean(Settings.class);
 
-    private final Connection connection = DriverManager.getConnection(setting.getURL(),setting.getUsername(),setting.getPassword());
     @Getter
-    Statement statement = connection.createStatement();
+    private final Connection connection = DriverManager.getConnection(setting.getURL(),setting.getUsername(),setting.getPassword());
 
     public JDBConnect() throws SQLException {
     }

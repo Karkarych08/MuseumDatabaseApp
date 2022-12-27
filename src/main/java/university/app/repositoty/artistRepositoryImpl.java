@@ -7,18 +7,17 @@ import university.app.Services.JDBConnect;
 import university.app.dao.artistDAO;
 
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.*;
+import java.util.Date;
 
 
 @Repository
-public class artistRepositoryImpl implements artistRepository {
+public class  artistRepositoryImpl implements artistRepository {
 
     JDBConnect jdbConnect = new JDBConnect();
 
-    Statement statement = jdbConnect.getStatement();
+    Connection connection = jdbConnect.getConnection();
 
     public artistRepositoryImpl() throws SQLException {
     }
@@ -41,7 +40,19 @@ public class artistRepositoryImpl implements artistRepository {
 
     @Override
     public Collection<artistDAO> findAll() throws SQLException {
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM artist");
+        ResultSet resultSet = connection.createStatement().executeQuery("SELECT * FROM artist");
+        return getArtistDAOS(resultSet);
+    }
+
+    @Override
+    public Collection<artistDAO> findAllByCountry(String country) throws SQLException {
+        PreparedStatement prepareStatement = connection.prepareStatement("SELECT * FROM artist where country=?");
+        prepareStatement.setString(1,country);
+        ResultSet resultSet =  prepareStatement.executeQuery();
+        return getArtistDAOS(resultSet);
+    }
+
+    private Collection<artistDAO> getArtistDAOS(ResultSet resultSet) throws SQLException {
         ArrayList<artistDAO> artists = new ArrayList<>();
         while (resultSet.next()){
             artistDAO artist = new artistDAO(
@@ -55,11 +66,6 @@ public class artistRepositoryImpl implements artistRepository {
             artists.add(artist);
         }
         return artists;
-    }
-
-    @Override
-    public Collection<artistDAO> findAllByCountry(String country) {
-        return null;
     }
 
     @Override

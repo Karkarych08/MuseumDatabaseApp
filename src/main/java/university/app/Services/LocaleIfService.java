@@ -10,7 +10,8 @@ import java.util.Map;
 public class LocaleIfService implements Locale_If {
 
     private final static Map<String, java.util.Locale> SUPPORTED = Map.of(
-            "en", java.util.Locale.forLanguageTag("en")
+            "en", java.util.Locale.forLanguageTag("en"),
+            "ru", java.util.Locale.forLanguageTag("ru")
     );
 
     private Locale current = SUPPORTED.get("en");
@@ -28,4 +29,5 @@ public class LocaleIfService implements Locale_If {
     public java.util.Locale get() {
         return current;
     }
+    
 }

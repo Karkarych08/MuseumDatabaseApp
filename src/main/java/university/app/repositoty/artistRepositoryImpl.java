@@ -4,12 +4,12 @@ package university.app.repositoty;
 import org.springframework.stereotype.Repository;
 import university.app.Interfaces.artistRepository;
 import university.app.Services.JDBConnect;
-import university.app.dao.artistDAO;
+import university.app.dao.*;
 
 
 import java.sql.*;
+import java.sql.Date;
 import java.util.*;
-import java.util.Date;
 
 
 @Repository
@@ -22,20 +22,12 @@ public class  artistRepositoryImpl implements artistRepository {
     public artistRepositoryImpl() throws SQLException {
     }
 
-
     @Override
-    public void insert(artistDAO artist) {
-
-    }
-
-    @Override
-    public void update(artistDAO artist) {
-
-    }
-
-    @Override
-    public Collection<artistDAO> findOlderThenDate(Date date) {
-        return null;
+    public Collection<artistDAO> findOlderThenDate(Calendar date) throws SQLException {
+        PreparedStatement prepareStatement = connection.prepareStatement("SELECT * FROM artist where dateofbirth>?");
+        prepareStatement.setDate(1, new Date(date.getTime().getTime()));
+        ResultSet resultSet =  prepareStatement.executeQuery();
+        return getArtistDAOS(resultSet);
     }
 
     @Override
@@ -69,7 +61,10 @@ public class  artistRepositoryImpl implements artistRepository {
     }
 
     @Override
-    public Optional<artistDAO> findById(long id) {
-        return Optional.empty();
+    public Collection<artistDAO> findById(long id) throws SQLException {
+        PreparedStatement prepareStatement = connection.prepareStatement("SELECT * FROM artist where id=?");
+        prepareStatement.setLong(1,id);
+        ResultSet resultSet =  prepareStatement.executeQuery();
+        return getArtistDAOS(resultSet);
     }
 }

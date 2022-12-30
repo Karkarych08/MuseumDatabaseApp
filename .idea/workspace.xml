@@ -4,29 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1282e010-11c0-4401-a08f-756308eb610b" name="Changes" comment="add findAll function">
-      <change afterPath="$PROJECT_DIR$/src/main/java/university/app/Interfaces/Locale_If.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/university/app/Interfaces/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/university/app/Services/Exceptions/LocaleNotSupportedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/university/app/Services/LocaleIfService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/university/app/Services/Massage_localization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/university/app/Services/UserInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/university/app/config/I18n_config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bundle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bundle_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bundle_ru.properties" afterDir="false" />
+    <list default="true" id="1282e010-11c0-4401-a08f-756308eb610b" name="Changes" comment="add findbycountry function&#10;add UI&#10;add localisation">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/bungle_ru.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/university/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/university/app/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/university/app/Interfaces/UI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/university/app/Interfaces/artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/university/app/Interfaces/artist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/university/app/Interfaces/artistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/university/app/Interfaces/artistRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/university/app/Services/JDBConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/university/app/Services/JDBConnect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/university/app/Services/LocaleIfService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/university/app/Services/LocaleIfService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/university/app/Services/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/university/app/Services/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/university/app/Services/artistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/university/app/Services/artistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/university/app/config/I18n_config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/university/app/config/I18n_config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/university/app/repositoty/artistRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/university/app/repositoty/artistRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bundle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bungle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bundle_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bundle_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bungle_en.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -54,31 +54,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "extract.method.default.visibility": "private",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "004a8c2c000e85383c7efee5a6d83c46"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/rakmo/Documents/MuseumDatabaseApp/src/main/java/university/app/dao/artistDAO.java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;IntelliLang.Configuration&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;004a8c2c000e85383c7efee5a6d83c46&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="university.app.Services.Exceptions" />
@@ -171,7 +173,19 @@
       <workItem from="1668677980178" duration="13414000" />
       <workItem from="1671788075369" duration="931000" />
       <workItem from="1671967720366" duration="6646000" />
-      <workItem from="1672049704809" duration="13354000" />
+      <workItem from="1672049704809" duration="28002000" />
+      <workItem from="1672348905491" duration="1275000" />
+      <workItem from="1672350430263" duration="336000" />
+      <workItem from="1672350820220" duration="2264000" />
+      <workItem from="1672353342574" duration="1709000" />
+      <workItem from="1672356519704" duration="1119000" />
+      <workItem from="1672357694574" duration="484000" />
+      <workItem from="1672358225122" duration="982000" />
+      <workItem from="1672359231748" duration="959000" />
+      <workItem from="1672360249348" duration="406000" />
+      <workItem from="1672360686021" duration="779000" />
+      <workItem from="1672361488973" duration="1621000" />
+      <workItem from="1672363223914" duration="660000" />
     </task>
     <task id="LOCAL-00001" summary="add interfaces and DAO">
       <created>1667990857460</created>
@@ -187,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668806212523</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add findbycountry function&#10;add UI&#10;add localisation">
+      <created>1672162939818</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672162939818</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +228,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add interfaces and DAO" />
     <MESSAGE value="add findAll function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add findAll function" />
+    <MESSAGE value="add findbycountry function&#10;add UI&#10;add localisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="add findbycountry function&#10;add UI&#10;add localisation" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="university.app.Services.Exceptions.LocaleNotSupportedException" package="university.app.Services.Exceptions" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

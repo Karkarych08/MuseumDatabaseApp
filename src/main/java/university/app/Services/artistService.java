@@ -1,14 +1,13 @@
 package university.app.Services;
 
 import lombok.RequiredArgsConstructor;
-import university.app.Interfaces.artist;
-
 import org.springframework.stereotype.Service;
-
+import university.app.Interfaces.artist;
 import university.app.dao.artistDAO;
 import university.app.repositoty.artistRepositoryImpl;
 
 import java.sql.SQLException;
+import java.util.Calendar;
 import java.util.Collection;
 
 @Service
@@ -28,8 +27,13 @@ public class artistService implements artist {
         return aRep.findAllByCountry(country);
     }
 
-    @Override
-    public Collection<artistDAO> findartist(Integer id) {
-        return null;
+    public Collection<artistDAO> findAllartistbydate(Calendar date) throws SQLException {
+
+        return aRep.findOlderThenDate(date);
     }
+
+    public Collection<artistDAO> findById(long id) throws SQLException{
+        return aRep.findById(id);
+    }
+
 }
